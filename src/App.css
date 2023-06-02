@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  margin: 0;
+  box-sizing: border-box;
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--light-gray);
+  overflow: scroll;
+}
+
+.App {
+  height: 60rem;
+  width: 15rem;
+
+  margin: auto;
+  border-radius: 10px;
+
+}
+
+.panel {
+  height: 33.33%;
+  width: 100%;
+  padding: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.panel:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.panel:last-child {
+  border-radius: 0 0 10px 10px;
+  
+}
+
+.title {
+  font-family: 'big shoulders display', cursive;
+  color: var(--light-gray);
+}
+
+.desc {
+  font-family: 'lexend deca', sans-serif;
+  color: var(--transparent-white);
+  line-height: 1.5rem;
+}
+
+.learn {
+  width: 50%;
+  height: 3rem;
+  border-radius: 20px;
+  border: none;
+  font-family: 'lexend deca', sans-serif;
+  cursor: pointer;
+}
+
+.learn:hover {
+  background-color: transparent;
+  color: var(--light-gray) !important;
+  border: var(--light-gray) solid 1px;
+}
+
+@media only screen and (min-width: 900px) {
+  .App {
+    display: flex;
+    width: 60rem;
+    height: 23rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .panel {
+    width: 33%;
+    height: 100%;
+  }
+
+  .panel:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .panel:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+
+  
+}
+
